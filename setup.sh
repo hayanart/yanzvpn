@@ -27,8 +27,8 @@ clear;clear;clear
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 echo -e "  Welcome To Wings VPN Script Installer ${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
 echo -e "     This Will Quick Setup VPN Server On Your Server"
-echo -e "         Auther : ${green}WINGSVPN ${NC}${YELLOW}(${NC} ${green}Wings VPN ${NC}${YELLOW})${NC}"
-echo -e "       © Recode By Wing VPN ${YELLOW}(${NC} 2023 ${YELLOW})${NC}"
+echo -e "         Auther : ${green}WINGSVPN ${NC}${YELLOW}(${NC} ${green}Hayan Art ${NC}${YELLOW})${NC}"
+echo -e "       © Recode By Hayan Art ${YELLOW}(${NC} 2023 ${YELLOW})${NC}"
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 echo ""
 sleep 5
@@ -36,7 +36,7 @@ sleep 5
 ipsaya=$(wget -qO- ipinfo.io/ip)
 data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 date_list=$(date +"%Y-%m-%d" -d "$data_server")
-data_ip="https://raw.githubusercontent.com/wingshope/vip/main/izin"
+data_ip="https://raw.githubusercontent.com/hayanart/yanzvpn/main/izin"
 checking_sc() {
   useexp=$(wget -qO- $data_ip | grep $ipsaya | awk '{print $3}')
   if [[ $date_list < $useexp ]]; then
@@ -50,8 +50,8 @@ checking_sc() {
     echo -e "   \033[0;33mYour VPS${NC} $ipsaya \033[0;33mHas been Banned${NC}"
     echo -e "     \033[0;33mBuy access permissions for scripts${NC}"
     echo -e "             \033[0;33mContact Admin :${NC}"
-    echo -e "      \033[0;36mTelegram${NC} t.me/wingsofhope"
-    echo -e "      ${GREEN}WhatsApp${NC} wa.me/6282261333421"
+    echo -e "      \033[0;36mTelegram${NC} t.me/againsart"
+    echo -e "      ${GREEN}WhatsApp${NC} wa.me/6285871678580"
     echo -e "\033[1;93m────────────────────────────────────────────\033[0m"
     exit
   fi
